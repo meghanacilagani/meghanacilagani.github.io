@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>👩🏽‍💻 Your Name — Portfolio</title>
+  <meta name="description" content="Portfolio of Your Name — cybersecurity, ML, and full‑stack projects." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0b0c10;
+      --panel: #111317;
+      --text: #e6e6e6;
+      --muted:#96a0af;
+      --brand:#4f46e5;
+      --brand-2:#22d3ee;
+      --card:#151922;
+      --ring: rgba(79,70,229,0.35);
+    }
+    @media (prefers-color-scheme: light){
+      :root{--bg:#f7f7fb;--panel:#ffffff;--text:#0e1116;--muted:#5b6573;--card:#ffffff;--ring:rgba(79,70,229,0.25)}
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;background:linear-gradient(180deg,rgba(11,12,16,.9),rgba(11,12,16,.7));backdrop-filter:saturate(160%) blur(8px);z-index:10;border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700}
+    .brand .dot{width:10px;height:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2));border-radius:50%;box-shadow:0 0 0 6px var(--ring)}
+    .nav a{font-weight:600;color:var(--text)}
+    .nav-links{display:flex;gap:18px}
+    .btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:white;border:none;border-radius:14px;padding:10px 14px;font-weight:700;box-shadow:0 6px 20px rgba(79,70,229,.35);transition:.2s transform}
+    .btn:hover{transform:translateY(-1px)}
+
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:48px 0}
+    .tag{display:inline-block;border:1px solid rgba(255,255,255,.12);padding:6px 10px;border-radius:999px;color:var(--muted);font-weight:600}
+    h1{font-size:44px;line-height:1.08;margin:10px 0}
+    .sub{color:var(--muted);max-width:60ch}
+    .hero-card{background:radial-gradient(1000px 300px at 10% -20%, rgba(79,70,229,.25), transparent), var(--card);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:24px;}
+    .hero-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .chip{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:10px 12px;border-radius:12px;font-weight:600;color:var(--muted)}
+
+    section{padding:28px 0}
+    .section-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+    h2{font-size:22px;margin:0}
+
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px}
+    .card h3{margin:0;font-size:18px}
+    .card p{margin:0;color:var(--muted)}
+    .meta{display:flex;gap:8px;flex-wrap:wrap}
+    .badge{padding:4px 8px;border-radius:999px;border:1px solid rgba(255,255,255,.14);font-size:12px;color:var(--muted)}
+
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .timeline{display:grid;gap:12px}
+    .row{display:grid;grid-template-columns:120px 1fr;gap:8px}
+    .row .where{color:var(--muted)}
+
+    footer{border-top:1px solid rgba(255,255,255,.08);margin-top:28px;padding:22px 0;color:var(--muted)}
+
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .two-col{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand"><span class="dot"></span> <span>Your Name</span></div>
+      <nav class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <button class="btn" id="resumeBtn">Resume</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <span class="tag">Cybersecurity • ML • Full‑Stack</span>
+        <h1>Hi, I’m <em>Your Name</em> — I build secure systems and ML tools that ship.</h1>
+        <p class="sub">Graduate student at Purdue focusing on AI‑driven malware detection, cloud security, and risk & compliance. Previously at Pitney Bowes — shipped performant UIs and Golang APIs. Open to Fall 2025 internships in Red Team / AppSec / Security Engineering.</p>
+        <div class="meta" style="margin-top:14px">
+          <a class="badge" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+          <a class="badge" href="https://github.com/" target="_blank">GitHub</a>
+          <a class="badge" href="#" id="emailLink">me@purdue.edu</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-grid">
+          <div class="chip">⚡ Transformer‑based Malware Detection</div>
+          <div class="chip">🛡️ Data‑Free Backdoor Attacks (Research)</div>
+          <div class="chip">☁️ AWS IAM & Risk Automation</div>
+          <div class="chip">🧭 Threat Intel Dashboard (TI‑Dash)</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-title">
+        <h2>Featured Projects</h2>
+        <a href="https://github.com/yourusername?tab=repositories" target="_blank">View all →</a>
+      </div>
+      <div class="grid">
+        <!-- Duplicate a card block for more projects -->
+        <article class="card">
+          <h3>TI‑Dash — Threat Intelligence Dashboard</h3>
+          <p>IP/domain reputation, GeoIP map, RSS feeds, and MITRE ATT&CK tagging.</p>
+          <div class="meta">
+            <span class="badge">Python</span>
+            <span class="badge">Flask</span>
+            <span class="badge">Leaflet</span>
+          </div>
+          <div class="meta">
+            <a href="https://github.com/yourusername/ti-dash" target="_blank">Code</a>
+            <span>•</span>
+            <a href="#" target="_blank">Demo</a>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Polymorphic Malware Detection</h3>
+          <p>BERT/RoBERTa over opcode sequences; F1 and z‑score analysis.</p>
+          <div class="meta">
+            <span class="badge">PyTorch</span>
+            <span class="badge">NLP</span>
+            <span class="badge">Security</span>
+          </div>
+          <div class="meta">
+            <a href="https://github.com/yourusername/polymorphic-malware" target="_blank">Code</a>
+            <span>•</span>
+            <a href="#" target="_blank">Paper</a>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Data‑Free Backdoor Attack</h3>
+          <p>Logit‑based trigger search using substitute datasets; 99% ASR in restricted‑data setups.</p>
+          <div class="meta">
+            <span class="badge">Adversarial ML</span>
+            <span class="badge">Vision</span>
+            <span class="badge">Security</span>
+          </div>
+          <div class="meta">
+            <a href="https://github.com/yourusername/dfba-malware" target="_blank">Code</a>
+            <span>•</span>
+            <a href="#" target="_blank">Slides</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="two-col">
+      <div>
+        <div class="section-title"><h2>Experience</h2></div>
+        <div class="timeline">
+          <div class="card">
+            <div class="row">
+              <div class="when">2025</div>
+              <div>
+                <h3>Security Risk Analyst Intern</h3>
+                <div class="where">Purdue University • May–Aug 2025</div>
+                <p>Risk register mgmt, SOC 2 review, NIST RMF/ISO 31000/CMMC assessments, governance workflows.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="row">
+              <div class="when">2022–24</div>
+              <div>
+                <h3>Full‑Stack Developer</h3>
+                <div class="where">Pitney Bowes • Pune, India</div>
+                <p>Angular UI redesign, lazy loading & DOM perf, Golang APIs w/ MongoDB, secure coding (OWASP).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="section-title"><h2>Skills & Badges</h2></div>
+        <div class="card">
+          <div class="meta">
+            <span class="badge">Python</span><span class="badge">Golang</span><span class="badge">Angular</span><span class="badge">PyTorch</span><span class="badge">AWS</span><span class="badge">NIST RMF</span><span class="badge">CMMC</span><span class="badge">Qualys</span>
+          </div>
+          <p style="margin-top:8px;color:var(--muted)">I love teaching & mentoring—TA for ENGR 13300 and EPICS.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-title"><h2>Contact</h2></div>
+      <div class="card">
+        <p>Got an opportunity or collaboration in mind? Reach out.</p>
+        <div class="meta">
+          <a class="badge" href="mailto:me@purdue.edu">Email</a>
+          <a class="badge" href="https://cal.com/yourname" target="_blank">Book a chat</a>
+          <a class="badge" href="/resume.pdf" target="_blank">Download Resume</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <span>© <span id="year"></span> Your Name</span>
+        <span>Built with ♥ and GitHub Pages</span>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('resumeBtn').addEventListener('click',()=>window.open('/resume.pdf','_blank'))
+    document.getElementById('emailLink').addEventListener('click',(e)=>{
+      e.preventDefault();
+      window.location.href='mailto:me@purdue.edu';
+    })
+  </script>
+</body>
+</html>
